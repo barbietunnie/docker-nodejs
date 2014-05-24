@@ -21,3 +21,4 @@ RUN yum install -y git openssh-clients
 
 # Installing grunt
 RUN npm install -g grunt-cli
+RUN npm install -g bower
