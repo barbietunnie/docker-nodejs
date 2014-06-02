@@ -16,8 +16,8 @@ RUN rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/6/i386/epel-release-6
 # Installing node.js
 RUN yum install -y --enablerepo=epel nodejs npm
 
-# Installing git and ssh-agent and ImageMagick
-RUN yum install -y git openssh-clients ImageMagick
+# Installing git and ssh-agent and GraphicsMagick
+RUN yum install -y git openssh-clients GraphicsMagick
 
 # Installing grunt
 RUN npm install -g grunt-cli
