@@ -21,5 +21,5 @@ RUN yum install -y libpng libjpeg libpng-devel libjpeg-devel libpng
 RUN yum install -y git openssh-clients GraphicsMagick
 
 # Installing grunt
-RUN npm install -g grunt-cli
+RUN npm install -g gulp
 RUN npm install -g bower
