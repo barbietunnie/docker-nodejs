@@ -10,6 +10,9 @@ MAINTAINER Marco Palladino, marco@mashape.com
 ENV NODE_VERSION 0.10.28
 
 # Upgrading system
+RUN yum clean all
+RUN yum distro-sync
+RUN yum update
 RUN yum -y upgrade
 
 # Installing node.js
