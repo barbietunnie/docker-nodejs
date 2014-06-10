@@ -10,11 +10,12 @@ MAINTAINER Marco Palladino, marco@mashape.com
 RUN yum -y upgrade
 
 # Enabling EPEL
-RUN rpm --import https://fedoraproject.org/static/0608B895.txt
-RUN rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# RUN rpm --import https://fedoraproject.org/static/0608B895.txt
+# RUN rpm -Uvh http://download-i2.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
 # Installing node.js
-RUN yum install -y --enablerepo=epel nodejs npm
+RUN yum install -y wget tar make gcc-c++
+RUN cd /tmp && wget http://nodejs.org/dist/v0.10.28/node-v0.10.28.tar.gz && tar xzf node-v0.10.28.tar.gz && cd node-v0.10.28 && ./configure && make && sudo make install
 
 # Installing git and ssh-agent and GraphicsMagick
 RUN yum install -y libpng libjpeg libpng-devel libjpeg-devel libpng
