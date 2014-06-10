@@ -13,7 +13,7 @@ ENV NODE_VERSION 0.10.28
 RUN yum -y upgrade
 
 # Installing node.js
-RUN yum install -y wget tar make gcc-c++ openssl
+RUN yum install -y wget tar make gcc-c++ openssl openssl-devel
 RUN cd /tmp && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz && tar xzf node-v$NODE_VERSION.tar.gz && cd node-v$NODE_VERSION && ./configure && make && sudo make install
 
 # Installing git and ssh-agent and GraphicsMagick
