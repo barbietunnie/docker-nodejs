@@ -23,6 +23,6 @@ RUN cd /tmp && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.ta
 RUN yum install -y libpng libjpeg libpng-devel libjpeg-devel libpng
 RUN yum install -y git openssh-clients GraphicsMagick
 
-# Installing grunt
+# Installing gulp and bower globally
 RUN npm install -g gulp
 RUN npm install -g bower
