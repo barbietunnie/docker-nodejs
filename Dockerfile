@@ -17,7 +17,7 @@ RUN yum -y upgrade
 
 # Installing node.js
 RUN yum install -y wget tar make gcc-c++ openssl openssl-devel
-RUN cd /tmp && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz && tar xzf node-v$NODE_VERSION.tar.gz && cd node-v$NODE_VERSION && ./configure && make && sudo make install
+RUN cd /tmp && wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz && tar xzf node-v$NODE_VERSION.tar.gz && cd node-v$NODE_VERSION && ./configure && make && make install
 
 # Installing git and ssh-agent and GraphicsMagick
 RUN yum install -y libpng libjpeg libpng-devel libjpeg-devel libpng
